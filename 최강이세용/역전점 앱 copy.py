@@ -24,7 +24,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- 데이터 불러오기 및 전처리 ---
-fatigue_df = pd.read_csv('피로도_with_index.csv', encoding='utf-8')
+fatigue_df = pd.read_csv('fatigue_with_index.csv', encoding='utf-8')
 fatigue_df.drop(columns=['구속_변화량'], inplace=True)
 fatigue_df['부상위험도'] = fatigue_df['부상위험도'].fillna(0)
 fatigue_df['피로도지표'] = fatigue_df['피로도지수'] * 100
